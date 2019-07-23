@@ -29,7 +29,9 @@ https://stackoverflow.com/a/11175851/1279318
 https://stackoverflow.com/a/33764934/1279318
 
 ## 2 X 2 grid
-    ffmpeg -i input0.mp4 -i input1.mp4 -i input2.mp4 -i input3.mp4 -filter_complex "[0:v][1:v]hstack=inputs=2[top];[2:v][3:v]hstack=inputs=2[bottom];[top][bottom]vstack=inputs=2[v]" -map "[v]" output.mp4
+    ffmpeg -i input0.mp4 -i input1.mp4 -i input2.mp4 -i input3.mp4 -filter_complex \
+    "[0:v][1:v]hstack=inputs=2[top];[2:v][3:v]hstack=inputs=2[bottom];
+    [top][bottom]vstack=inputs=2[v]" -map "[v]" output.mp4
     
 ## 3 X 3 Grid
     ffmpeg -i input0.mp4 -i input1.mp4 <...> -i input9.mp4 -to 00:00:55 -filter_complex \
