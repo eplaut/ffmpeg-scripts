@@ -48,4 +48,4 @@ https://stackoverflow.com/a/33764934/1279318
      
 ## trim
 
-    ffmpeg -i input.mp4  -ss HH:MM:SS.mmm -to HH:MM:SS.mmm output.mp4
+    ffmpeg -i input.mp4  -ss HH:MM:SS.mmm -to HH:MM:SS.mmm :v copy -c:a copy output.mp4
