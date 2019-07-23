@@ -49,3 +49,21 @@ https://stackoverflow.com/a/33764934/1279318
 ## trim
 
     ffmpeg -i input.mp4  -ss HH:MM:SS.mmm -to HH:MM:SS.mmm :v copy -c:a copy output.mp4
+
+# Create video from images
+
+https://video.stackexchange.com/a/13069
+
+    ffmpeg -framerate 30 -i image-%03d.png -c:v libx264 -pix_fmt yuv420p -crf 23 output.mp4
+    
+* `-framerate` is how many frames there are in a second
+* `image-%03d.png` is files in assending order from image-000.png and up. you cannot skip a number.
+
+## Randomize images (python)
+
+    import glob, random
+    files = glob.glob('source/*.jpg')
+    random.shuffle(files)
+    import shutil
+    for idx, fn in enumerate(files):
+        shutil.copy(fn, 'image-%03d.jpg' % (idx))
