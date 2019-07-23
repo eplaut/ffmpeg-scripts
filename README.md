@@ -40,4 +40,12 @@ https://stackoverflow.com/a/33764934/1279318
     [6:v]scale=640:640[v6];[7:v]scale=640:640[v7];[8:v]scale=640:640[v8];[v6][v7][v8]hstack=inputs=3[bottom];
     [top][middle][bottom]vstack=inputs=3[v]" -map "[v]" output.mp4
     
+# Resize vidoe 
 
+## crop
+
+     ffmpeg -i input.mp4  -vf "scale=(iw*sar)*max(864/(iw*sar)\,864/ih):ih*max(864/(iw*sar)\,864/ih), crop=864:864" output.mp4
+     
+## trim
+
+    ffmpeg -i input.mp4  -ss HH:MM:SS.mmm -to HH:MM:SS.mmm output.mp4
