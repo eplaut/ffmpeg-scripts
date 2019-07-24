@@ -88,3 +88,16 @@ https://video.stackexchange.com/a/13069
 https://github.com/xiumingzhang/cheatsheets/blob/master/ffmpeg-imagemagick.md#rotate-images-in-a-folder
 
     convert "$file" -rotate 90 "${file%.png}"_rotated.png
+
+# Image manipulation
+
+# Resize image
+https://www.howtogeek.com/109369/how-to-quickly-resize-convert-modify-images-from-the-linux-terminal/
+    
+    convert example.png -resize 200x100 example.png
+
+## Add background to resize images
+https://unix.stackexchange.com/a/122592/279393
+
+    mogrify -gravity Center -extent 1024x1024 -background white -colorspace RGB *jpg
+    
