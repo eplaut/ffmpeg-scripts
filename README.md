@@ -6,7 +6,7 @@ Collection of snippets using ffmpeg to create presnation and mix videos
 
 https://stackoverflow.com/a/9570992/1279318
 
-    ffmpeg -i input.mp3 -vf "transpose=1" output.mp4
+    ffmpeg -i input.mp4 -vf "transpose=1" output.mp4
 
 * 0 = 90CounterCLockwise and Vertical Flip (default)
 * 1 = 90Clockwise
