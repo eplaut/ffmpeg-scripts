@@ -43,8 +43,12 @@ https://stackoverflow.com/a/33764934/1279318
 # Resize vidoe 
 
 ## crop
+https://www.bugcodemaster.com/article/crop-video-using-ffmpeg
 
-     ffmpeg -i input.mp4  -vf "scale=(iw*sar)*max(864/(iw*sar)\,864/ih):ih*max(864/(iw*sar)\,864/ih), crop=864:864" output.mp4
+     ffmpeg -i input.mp4  -vf "crop=1024:1024" output.mp4
+     
+* `crop=w:h:x:y`
+* `in_w` and `in_h` are image variable for width and height
      
 ## trim
 
