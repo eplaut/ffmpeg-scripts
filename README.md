@@ -71,3 +71,20 @@ https://video.stackexchange.com/a/13069
     import shutil
     for idx, fn in enumerate(files):
         shutil.copy(fn, 'image-%03d.jpg' % (idx))
+        
+
+# Rotation
+
+## See orientaion attribute
+
+    exiftool -Orientation -S source/
+
+## Remove orientaion attribute
+
+    exiftool -Orientation= source/
+
+## Rotate image
+
+https://github.com/xiumingzhang/cheatsheets/blob/master/ffmpeg-imagemagick.md#rotate-images-in-a-folder
+
+    convert "$file" -rotate 90 "${file%.png}"_rotated.png
