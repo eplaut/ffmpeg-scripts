@@ -2,6 +2,10 @@
 
 Collection of snippets using ffmpeg to create presnation and mix videos
 
+# Add sound to video
+
+    ffmpeg -i input.mp4 -i audio2.mp3 -to 00:02:30 -c:v copy -c:a aac -strict experimental output.mp4
+
 # Video Rotation
 
 https://stackoverflow.com/a/9570992/1279318
