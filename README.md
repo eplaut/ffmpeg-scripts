@@ -12,7 +12,7 @@ https://stackoverflow.com/a/9570992/1279318
 * 1 = 90Clockwise
 * 2 = 90CounterClockwise
 * 3 = 90Clockwise and Vertical Flip
-* -vf "transpose=2,transpose=2" for 180 degrees
+* `-vf "transpose=2,transpose=2"` for 180 degrees
 
 # Concat Videos
 
