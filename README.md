@@ -105,3 +105,8 @@ https://unix.stackexchange.com/a/122592/279393
 
     mogrify -gravity Center -extent 1024x1024 -background white -colorspace RGB *jpg
     
+## PDF to jpg
+
+Include adding white background instead of transparent background
+
+    convert -background white -flatten -colorspace sRGB -density 300 input.pdf output.jpg
