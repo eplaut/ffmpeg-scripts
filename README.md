@@ -30,8 +30,8 @@ https://stackoverflow.com/a/9570992/1279318
 
 https://stackoverflow.com/a/11175851/1279318
 
-    rm list.txt
-    for file_name in *.mp3; do
+    rm -f list.txt
+    for file_name in *.mp4; do
         echo "file '$file_name'" >> list.txt
     done
     ffmpeg -f concat -i list.txt output.mp4
