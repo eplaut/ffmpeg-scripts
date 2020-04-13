@@ -2,9 +2,17 @@
 
 Collection of snippets using ffmpeg to create presnation and mix videos
 
-# Add sound to video
+# Audio
+
+## Add sound to video
 
     ffmpeg -i input.mp4 -i audio2.mp3 -to 00:02:30 -c:v copy -c:a aac -strict experimental output.mp4
+    
+## Extract Audio from video
+
+https://gist.github.com/protrolium/e0dbd4bb0f1a396fcb55#extract-audio
+
+    ffmpeg -i video.mp4 -f mp3 -ab 192000 -vn music.mp3
 
 # Video Rotation
 
